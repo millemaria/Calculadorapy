@@ -20,6 +20,23 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=235, height=50, bg=cor1)
 frame_corpo.grid(row=1, column=0)
 
+
+# criando funcao 
+def calcular():
+    resultado =eval('9/9')
+    
+    #passando valor para tela
+    app_label.set(resultado)
+
+
+
+
+# criando label
+valor_texto = StringVar()
+
+app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18'), bg=cor3, fg=cor3)
+app_label.place(x=0,y=0)
+
 #criando botoes
 
 b_1 = Button(frame_corpo, text="C", width=11, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
@@ -62,5 +79,8 @@ b_17 = Button(frame_corpo, text=".", width=5, height=2, bg=cor5, fg=cor2, font=(
 b_17.place(x=118 , y=208)
 b_18 = Button(frame_corpo, text="=", width=5, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177 , y=208)
+
+
+calcular()
 
 janela.mainloop()
